@@ -3,4 +3,4 @@
 
 This is a demo of AngularJS listing Github Repos.
 
-I need a real blog.
+I need a real blog.  One day.  Some day.  Soon?
