@@ -9,7 +9,7 @@
                 isArray: true
             }
         });
-  }]);
+    }]);
 
     app.controller('RepoListCtrl', ['$scope', '$mdSidenav', 'ghRepos', function ($scope, $mdSidenav, ghRepos) {
         //.complete(function(data){
