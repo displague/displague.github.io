@@ -1,22 +1,25 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.7.1/angular-material.min.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+	<meta name="viewport" content="initial-scale=1" />
         <title>Marques Johansson on GitHub</title>
     </head>
     <body ng-app="DisplagueGHIOApp">
         <article ng-controller="RepoListCtrl">
-        <div layout="row" ng-repeat="repo in repos">
-            <div ng-if="repo.fork">
-                <strong>{{repo.name}}</strong><em>{{repo.html_url}}</em>            
-            </div></div>
+            <div layout="row" flex ng-repeat="repo in repos">
+                <div ng-if="repo.fork">
+                    <strong>{{repo.name}}</strong><em>{{repo.html_url}}</em>
+                </div>
+	    </div>
         </article>
         
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-resource.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.7.1/angular-material.min.js"></script>        
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
 
         <script src="app.js"></script>
     </body>
