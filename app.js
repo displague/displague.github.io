@@ -2,6 +2,12 @@
     'use strict';
     var app = angular.module('DisplagueGHIOApp', ['ngMaterial', 'ngResource']);
 
+    app.config(function($mdThemingProvider){
+	    $mdThemingProvider.theme('default')
+		    .primaryPalette('yellow')
+		    .accentPallete('green');
+    });
+
     app.factory('ghRepos', ['$resource', function ($resource) {
         return $resource('https://api.github.com/users/displague/repos', {}, {
             query: {
@@ -13,6 +19,18 @@
 
     app.controller('RepoListCtrl', ['$scope', '$mdSidenav', 'ghRepos', function ($scope, $mdSidenav, ghRepos) {
         //.complete(function(data){
+	$scope.selectRepo = function(repo){
+		$scope.repo = repo;
+		$scope.toggleList();
+	};
+
+	$scope.toggleList = function() {
+		var pending = $mdBottomSheet.hide() || $q.when(true);
+		pending.then(function(){
+			$mdSidenav('left').toggle();
+		});
+	};
+
         ghRepos.query({}, function (data) {
             $scope.repos = data
         });
