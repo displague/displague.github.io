@@ -26,8 +26,8 @@
 
 	$scope.toggleList = function() {
 		var pending = $mdBottomSheet.hide() || $q.when(true);
-		pending.then(function(){
-			$mdSidenav('left').toggle();
+		pending.then(function(menuId){
+			$mdSidenav(menuId).toggle();
 		});
 	};
 
