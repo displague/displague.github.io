@@ -1,7 +1,7 @@
 # displague.github.io
 ## Marques Johansson on Github
 
-This is a demo of AngularJS listing Github Repos.
+This is a listing of displague's Github Repos. This is only a test.
 I intend to learn/practice Angular2 + Material here. Slow start.
 
 ## Why?
