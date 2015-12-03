@@ -5,4 +5,4 @@ This is a listing of displague's Github Repos.
 I intend to learn/practice Angular2 + Material here. Not much at the moment.
 
 ## Why?
-I need a real blog.  One day.  Some day.  Soon?
+I need a real blog.  One day.  Some day.  Since the past. Soon?
