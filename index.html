@@ -1,50 +1,50 @@
-
 <!DOCTYPE html>
+<!-- vim: set et ts=4 sw=4 tw=80 : -->
 <html lang="en" ng-app="DisplagueGHIOApp">
     <head>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
-	<meta name="viewport" content="initial-scale=1" />
+        <meta name="viewport" content="initial-scale=1" />
         <title>Marques Johansson on GitHub</title>
     </head>
     <body layout="row" ng-controller="RepoListCtrl as rl">
-  <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
-                md-component-id="left"
-                md-is-locked-open="$mdMedia('gt-sm')">
+        <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+                    md-component-id="left"
+                    md-is-locked-open="$mdMedia('gt-sm')">
 
-    <md-toolbar layout="column" class="md-whiteframe-z1">
-      <h1>Repos</h1>
-    </md-toolbar>
+        <md-toolbar layout="column" class="md-whiteframe-z1">
+        <h1>Repos</h1>
+        </md-toolbar>
 
-    <md-list>
-      <md-list-item ng-repeat="repo in repos">
-          <md-button ng-if="repo.fork" ng-click="rl.selectRepo(repo)" ng-class="{'selected' : repo === rl.selected }">
-            {{repo.name}}
-          </md-button>
-      </md-list-item>
-    </md-list>
-
-  </md-sidenav>
-
- <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
-    <md-toolbar layout="row" class="md-whiteframe-z1">
-      <md-button class="menu" hide-gt-sm ng-click="rl.toggleList('left')" aria-label="Show Repo List">
-        <md-icon md-svg-icon="menu" ></md-icon>
-      </md-button>
-      <h1>Displague Repos</h1>
-    </md-toolbar>
-
-    <md-content flex id="content">
-        <a ng-href="{{rl.selected.html_url}}">link</a>
-        <h2>{{rl.selected.name}}</h2>
-        <p>{{rl.selected.description}}</p>
-
-        <md-button class="repo" md-no-ink ng-click="rl.showRepoOptions($event)" aria-label="Open Repo">
-          <md-tooltip>Open {{ rl.selected.name }}</md-tooltip>
-          <md-icon md-svg-icon="share"></md-icon>
+        <md-list>
+        <md-list-item ng-repeat="repo in repos">
+        <md-button ng-if="repo.fork" ng-click="rl.selectRepo(repo)" ng-class="{'selected' : repo === rl.selected }">
+        {{repo.name}}
         </md-button>
-      </md-content>
-  </div>
+        </md-list-item>
+        </md-list>
+
+        </md-sidenav>
+
+        <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+            <md-toolbar layout="row" class="md-whiteframe-z1">
+            <md-button class="menu" hide-gt-sm ng-click="rl.toggleList('left')" aria-label="Show Repo List">
+            <md-icon md-svg-icon="menu" ></md-icon>
+            </md-button>
+            <h1>Displague Repos</h1>
+            </md-toolbar>
+
+            <md-content flex id="content">
+            <a ng-href="{{rl.selected.html_url}}">link</a>
+            <h2>{{rl.selected.name}}</h2>
+            <p>{{rl.selected.description}}</p>
+
+            <md-button class="repo" md-no-ink ng-click="rl.showRepoOptions($event)" aria-label="Open Repo">
+            <md-tooltip>Open {{ rl.selected.name }}</md-tooltip>
+            <md-icon md-svg-icon="share"></md-icon>
+            </md-button>
+            </md-content>
+        </div>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
