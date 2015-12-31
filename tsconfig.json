@@ -1,1 +1,17 @@
-{}
+{
+	"compilerOptions": {
+		"module": "system",
+		"target": "es5",
+		"noImplicitAny": false,
+		"outDir": "dist",
+		"rootDir": ".",
+		"sourceMap": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"removeComments": false
+	},
+	"exclude": [
+		"node_modules"
+	]																											]
+}
